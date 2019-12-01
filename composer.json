@@ -1,0 +1,11 @@
+{
+
+	"bin": [
+		"bin/brain-games"
+	]
+
+
+    "name": "user/php-project-lvl1",
+    "description": "project_1",
+    "require": {}
+}
