@@ -1,7 +1,7 @@
 {
 
 	
-	"name": "Nowitty/php-project-lvl1",
+	"name": "nowitty/php-project-lvl1",
     "description": "project_1",
     "require": {
         "php": "^7.3"
