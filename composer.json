@@ -5,7 +5,9 @@
 	]
 
 
-    "name": "user/php-project-lvl1",
+   	"name": "user/php-project-lvl1",
     "description": "project_1",
-    "require": {}
+    "require": {
+        "php": "^7.3",
+    }
 }
