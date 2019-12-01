@@ -2,12 +2,10 @@
 
 	"bin": [
 		"bin/brain-games"
-	]
-
-
-   	"name": "user/php-project-lvl1",
+	],
+	"name": "user/php-project-lvl1",
     "description": "project_1",
     "require": {
-        "php": "^7.3",
+        "php": "^7.3"
     }
 }
