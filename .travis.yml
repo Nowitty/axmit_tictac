@@ -2,7 +2,9 @@ language: php
 php:
   - '7.3'
 
-install: make install
+install: 
+  - make install
+  - composer global require "squizlabs/php_codesniffer $PHPCS_VER"
 
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
