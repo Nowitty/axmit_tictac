@@ -2,26 +2,28 @@
 
 	
 	"name": "nowitty/php-project-lvl1",
+    "bin": [
+        "bin/brain-games"
+    ],
     "description": "project_1",
-    "require": {
-        "php": "^7.3",
-		"wp-cli/php-cli-tools": "^0.11.11"
+    "scripts": {
+        "phpcs" : "phpcs"
     },
+    
     "autoload": {
     "psr-4": {
       "BrainGames\\Cli\\": "src"
     	},
+    "require": {
+        "php": "^7.3",
+        "wp-cli/php-cli-tools": "^0.11.11"
+    },
     "files": [
     	"src/Cli.php"
     	]
-	},
-    "bin": [
-		"bin/brain-games"
-	],
+	},   
     "require-dev": {
         "squizlabs/php_codesniffer": "*"
-    },
-    "scripts": {
-        "phpcs" : "phpcs"
     }
+    
 }
