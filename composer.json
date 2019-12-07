@@ -17,6 +17,6 @@
         "squizlabs/php_codesniffer": "3.*"
     },
     "files": [
-        "src/cli.php"
+        "src/Cli.php"
     ]
 }
