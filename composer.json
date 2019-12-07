@@ -5,27 +5,19 @@
     "bin": [
         "bin/brain-games"
     ],
-    "description": "project_1",
+    "description": "hexlet project_1",
     "scripts": {
         "phpcs" : "phpcs"
     },
-    
-    "autoload": {
-    "psr-4": {
-      "BrainGames\\Cli\\": "src"
-    	},
     "require": {
         "php": "^7.3",
         "wp-cli/php-cli-tools": "^0.11.11"
-    },
-    "files": [
-    	"src/Cli.php"
-    	]
-	},   
+    },   
     "require-dev": {
         "squizlabs/php_codesniffer": "3.*"
     },
-	"require": {
-		"wp-cli/php-cli-tools": "^0.11.11"
-	}
+    "files": [
+        "src/cli.php"
+        ]
+    }
 }
