@@ -6,7 +6,9 @@
         "bin/brain-games",
         "bin/brain-even"
     ],
-    "description": "hexlet project_1",
+    "type": "project",
+    "license": "MIT",
+    "description": "console games",
     "scripts": {
         "phpcs" : "phpcs"
     },
@@ -21,7 +23,7 @@
         "wp-cli/php-cli-tools": "@dev"
     },   
     "require-dev": {
-        "squizlabs/php_codesniffer": "3.*"
+        "squizlabs/php_codesniffer": "3.*@dev"
     },
     "minimum-stability": "dev",
     "prefer-stable":true
