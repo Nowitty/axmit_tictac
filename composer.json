@@ -6,6 +6,12 @@
         "bin/brain-games",
         "bin/brain-even"
     ],
+    "authors": [
+        {
+            "name": "RuslanKuga",
+            "email": "rkkuga@gmail.com"
+        }
+    ],
     "type": "project",
     "license": "MIT",
     "description": "console games",
