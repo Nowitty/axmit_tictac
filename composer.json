@@ -29,7 +29,7 @@
         "wp-cli/php-cli-tools": "@dev"
     },   
     "require-dev": {
-        "squizlabs/php_codesniffer": "3.*@dev"
+        "squizlabs/php_codesniffer": "3.*"
     },
     "minimum-stability": "dev",
     "prefer-stable":true
