@@ -5,7 +5,8 @@
     "bin": [
         "bin/brain-even",
         "bin/brain-calc",
-        "bin/brain-gcd"
+        "bin/brain-gcd",
+        "bin/brain-progression"
     ],
     "authors": [
         {
@@ -25,7 +26,8 @@
             "src/handler.php",
             "src/games/even.php",
             "src/games/calc.php",
-            "src/games/gcd.php"
+            "src/games/gcd.php",
+            "src/games/progression.php"
         ]
     },
     "require": {

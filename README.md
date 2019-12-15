@@ -14,3 +14,5 @@ You need use Composer, you can install brain-games system-wide with the followin
 [![asciicast](https://asciinema.org/a/uF9Aui0XbLQeUsPPT9d5nE110.svg)](https://asciinema.org/a/uF9Aui0XbLQeUsPPT9d5nE110)
 
 [![asciicast](https://asciinema.org/a/xeXaxwrCpzpLqIlNd6GEu31mO.svg)](https://asciinema.org/a/xeXaxwrCpzpLqIlNd6GEu31mO)
+
+[![asciicast](https://asciinema.org/a/Mi8UZC5Qmdbyj4kA2rc7dzg3A.svg)](https://asciinema.org/a/Mi8UZC5Qmdbyj4kA2rc7dzg3A)

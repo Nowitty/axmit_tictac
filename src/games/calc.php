@@ -34,15 +34,15 @@ function getCorrectAnswer($n1, $n2, $operation)
 {
     $solution = null;
     switch ($operation) {
-        case '+':
-            $solution = $n1 + $n2;
-            break;
-        case '-':
-            $solution = $n1 - $n2;
-            break;
-        case '*':
-            $solution = $n1 * $n2;
-            break;
+    case '+':
+        $solution = $n1 + $n2;
+        break;
+    case '-':
+        $solution = $n1 - $n2;
+        break;
+    case '*':
+        $solution = $n1 * $n2;
+        break;
     }
     return $solution;
 }
