@@ -8,6 +8,6 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-$user_name = BrainGames\Cli\run();
+use function BrainGames\games\even\run;
 
-BrainGames\Even\Even($user_name);
+run();

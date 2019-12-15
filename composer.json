@@ -3,8 +3,8 @@
 	
 	"name": "nowitty/php-project-lvl1",
     "bin": [
-        "bin/brain-games",
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
     ],
     "authors": [
         {
@@ -20,8 +20,9 @@
     },
     "autoload": {
         "files": [
-            "src/cli.php",
-            "src/even.php"
+            "src/handler.php",
+            "src/games/even.php",
+            "src/games/calc.php"
         ]
     },
     "require": {
