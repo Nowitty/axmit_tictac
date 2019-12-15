@@ -31,9 +31,8 @@ function getTasks()
 function getArray($numb, $key)
 {
     $result[0] = $numb;
-    for ($i = 1; $i < 10; $i++)
-    {
-        $result[$i] = $result[$i-1] + 2;
+    for ($i = 1; $i < 10; $i++) {
+        $result[$i] = $result[$i - 1] + 2;
     }
     $result[$key] = '..';
     return $result;
@@ -43,9 +42,8 @@ function getCorrectAnswer($arr)
 {
     $answer = 0;
     for ($i = 0; $i < 9; $i++) {
-        if ($arr[$i] === "..")
-        {
-            $answer = $arr[$i-1] + 2;
+        if ($arr[$i] === "..") {
+            $answer = $arr[$i - 1] + 2;
         }
     }
     return $answer;
