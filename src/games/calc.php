@@ -5,7 +5,6 @@
   use function BrainGames\handler\start;
   use function BrainGames\handler\flow;
 
-
   const TITLE = "What is the result of the expression?";
 
 function run()
@@ -17,7 +16,7 @@ function run()
 
 function getTasks()
 {
-    $operations = ['+', '-', '*']; 
+    $operations = ['+', '-', '*'];
     $tasks = [];
     for ($i = 0; $i < 3; $i++) {
         $numb1 = random_int(1, 100);
@@ -35,15 +34,15 @@ function getCorrectAnswer($n1, $n2, $operation)
 {
     $solution = null;
     switch ($operation) {
-    case '+':
-        $solution = $n1 + $n2;
-        break;
-    case '-':
-        $solution = $n1 - $n2;
-        break;
-    case '*':
-        $solution = $n1 * $n2;
-        break;
+        case '+':
+            $solution = $n1 + $n2;
+            break;
+        case '-':
+            $solution = $n1 - $n2;
+            break;
+        case '*':
+            $solution = $n1 * $n2;
+            break;
     }
     return $solution;
 }

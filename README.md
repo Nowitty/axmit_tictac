@@ -12,3 +12,5 @@ You need use Composer, you can install brain-games system-wide with the followin
         `composer global require "nowitty/php-project-lvl1"`
 
 [![asciicast](https://asciinema.org/a/uF9Aui0XbLQeUsPPT9d5nE110.svg)](https://asciinema.org/a/uF9Aui0XbLQeUsPPT9d5nE110)
+
+[![asciicast](https://asciinema.org/a/xeXaxwrCpzpLqIlNd6GEu31mO.svg)](https://asciinema.org/a/xeXaxwrCpzpLqIlNd6GEu31mO)

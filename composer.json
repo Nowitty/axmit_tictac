@@ -4,7 +4,8 @@
 	"name": "nowitty/php-project-lvl1",
     "bin": [
         "bin/brain-even",
-        "bin/brain-calc"
+        "bin/brain-calc",
+        "bin/brain-gcd"
     ],
     "authors": [
         {
@@ -16,13 +17,15 @@
     "license": "MIT",
     "description": "console games",
     "scripts": {
-        "phpcs" : "phpcs"
+        "phpcs" : "phpcs",
+        "phpcbf" : "phpcbf"
     },
     "autoload": {
         "files": [
             "src/handler.php",
             "src/games/even.php",
-            "src/games/calc.php"
+            "src/games/calc.php",
+            "src/games/gcd.php"
         ]
     },
     "require": {
