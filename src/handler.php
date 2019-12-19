@@ -14,22 +14,22 @@ function start($title)
     return $name;
 }
 
-function flow($user_name, $tasks)
+function flow($userName, $tasks)
 {
     $win = 1;
-    foreach ($tasks as $task => $correct_answer) {
+    foreach ($tasks as $task => $correctAnswer) {
         line('Question %s', $task);
         $answer = prompt('Your answer');
-        if ($answer == $correct_answer) {
+        if ($answer == $correctAnswer) {
             line('Correct!');
         } else {
-            line('\'%s\' is wrong answer ;(. Correct answer was \'%s\'.', $answer, $correct_answer);
-            line('Let\'s try again, %s', $user_name);
+            line('\'%s\' is wrong answer ;(. Correct answer was \'%s\'.', $answer, $correctAnswer);
+            line('Let\'s try again, %s', $userName);
             $win = 0;
             break;
         }
     }
     if ($win) {
-        line('Congratulations, %s!', $user_name);
+        line('Congratulations, %s!', $userName);
     }
 }

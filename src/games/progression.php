@@ -9,9 +9,9 @@
 
 function run()
 {
-    $user_name = start(TITLE);
+    $userName = start(TITLE);
     $tasks = getTasks();
-    flow($user_name, $tasks);
+    flow($userName, $tasks);
 }
 
 function getTasks()
@@ -20,10 +20,10 @@ function getTasks()
     for ($i = 0; $i < 3; $i++) {
         $numb = random_int(1, 100);
         $key = random_int(1, 8);
-        $array_of_numbers = getArray($numb, $key);
-        $task_text = trim(implode(' ', $array_of_numbers));
-        $correct_asnwer = getCorrectAnswer($array_of_numbers);
-        $tasks[$task_text] = $correct_asnwer;
+        $arrayOfNumbers = getArray($numb, $key);
+        $taskText = trim(implode(' ', $arrayOfNumbers));
+        $correctAsnwer = getCorrectAnswer($arrayOfNumbers);
+        $tasks[$taskText] = $correctAsnwer;
     }
     return $tasks;
 }

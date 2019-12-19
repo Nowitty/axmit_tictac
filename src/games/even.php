@@ -9,9 +9,9 @@
 
 function run()
 {
-    $user_name = start(TITLE);
+    $userName = start(TITLE);
     $tasks = getTasks();
-    flow($user_name, $tasks);
+    flow($userName, $tasks);
 }
 function getTasks()
 {
