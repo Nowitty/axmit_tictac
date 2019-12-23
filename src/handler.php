@@ -4,6 +4,8 @@
   
   use function cli\line;
   use function cli\prompt;
+  
+  const NUMBER_OF_ROUNDS = 3;
 
 function start($title)
 {
@@ -16,7 +18,6 @@ function start($title)
 
 function flow($userName, $tasks)
 {
-    $win = 1;
     foreach ($tasks as $task => $correctAnswer) {
         line('Question %s', $task);
         $answer = prompt('Your answer');
@@ -25,11 +26,8 @@ function flow($userName, $tasks)
         } else {
             line('\'%s\' is wrong answer ;(. Correct answer was \'%s\'.', $answer, $correctAnswer);
             line('Let\'s try again, %s', $userName);
-            $win = 0;
-            break;
+            return null;
         }
     }
-    if ($win) {
-        line('Congratulations, %s!', $userName);
-    }
+    line('Congratulations, %s!', $userName);
 }
