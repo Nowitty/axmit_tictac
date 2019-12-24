@@ -4,6 +4,7 @@
 
   use function BrainGames\handler\start;
   use function BrainGames\handler\flow;
+
   use const BrainGames\handler\NUMBER_OF_ROUNDS;
 
   const TITLE = "What is the result of the expression?";

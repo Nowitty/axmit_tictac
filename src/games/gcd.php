@@ -4,6 +4,7 @@
 
   use function BrainGames\handler\start;
   use function BrainGames\handler\flow;
+
   use const BrainGames\handler\NUMBER_OF_ROUNDS;
 
   const TITLE = "Find the greatest common divisor of given numbers.";

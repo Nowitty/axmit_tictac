@@ -4,6 +4,7 @@
 
   use function BrainGames\handler\start;
   use function BrainGames\handler\flow;
+
   use const BrainGames\handler\NUMBER_OF_ROUNDS;
 
   const TITLE = "Answer 'yes' if the number is even, otherwise answer 'no'";
@@ -25,5 +26,5 @@ function getTasks()
 }
 function isEven($numb)
 {
-  return ($numb % 2 == 0) ? true : false;
+    return ($numb % 2 == 0) ? true : false;
 }

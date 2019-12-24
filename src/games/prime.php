@@ -4,6 +4,7 @@
 
   use function BrainGames\handler\start;
   use function BrainGames\handler\flow;
+
   use const BrainGames\handler\NUMBER_OF_ROUNDS;
 
   const TITLE = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
