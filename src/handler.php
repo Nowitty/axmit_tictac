@@ -5,19 +5,14 @@
   use function cli\line;
   use function cli\prompt;
   
-  const NUMBER_OF_ROUNDS = 3;
+  const roundsCount = 3;
 
-function start($title)
+function flow($tasks, $title)
 {
     line('Welcome to the Brain Game!');
     line($title);
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
-    return $name;
-}
-
-function flow($userName, $tasks)
-{
+    $userName = prompt('May I have your name?');
+    line("Hello, %s!", $userName);
     foreach ($tasks as $task => $correctAnswer) {
         line('Question %s', $task);
         $answer = prompt('Your answer');

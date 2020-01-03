@@ -5,27 +5,26 @@
   use function BrainGames\handler\start;
   use function BrainGames\handler\flow;
 
-  use const BrainGames\handler\NUMBER_OF_ROUNDS;
+  use const BrainGames\handler\roundsCount;
 
   const TITLE = "What number is missing in the progression?";
   const LENGTH_OF_PROGRESSION = 10;
 
 function run()
 {
-    $userName = start(TITLE);
     $tasks = getTasks();
-    flow($userName, $tasks);
+    flow($tasks, TITLE);
 }
 
 function getTasks()
 {
     $tasks = [];
-    for ($i = 0; $i < NUMBER_OF_ROUNDS; $i++) {
+    for ($i = 0; $i < roundsCount; $i++) {
         $numb = random_int(1, 100);
         $key = random_int(1, 8);
-        $arrayOfNumbers = getArray($numb, $key);
-        $taskText = trim(implode(' ', $arrayOfNumbers));
-        $correctAsnwer = getCorrectAnswer($arrayOfNumbers);
+        $numbers = getArray($numb, $key);
+        $taskText = trim(implode(' ', $numbers));
+        $correctAsnwer = getCorrectAnswer($numbers);
         $tasks[$taskText] = $correctAsnwer;
     }
     return $tasks;

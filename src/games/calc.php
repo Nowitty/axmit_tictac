@@ -5,29 +5,28 @@
   use function BrainGames\handler\start;
   use function BrainGames\handler\flow;
 
-  use const BrainGames\handler\NUMBER_OF_ROUNDS;
+  use const BrainGames\handler\roundsCount;
 
   const TITLE = "What is the result of the expression?";
   const OPERATIONS = ['+', '-', '*'];
 
 function run()
 {
-    $userName = start(TITLE);
     $tasks = getTasks();
-    flow($userName, $tasks);
+    flow($tasks, TITLE);
 }
 
 function getTasks()
 {
     $tasks = [];
-    for ($i = 0; $i < NUMBER_OF_ROUNDS; $i++) {
+    for ($i = 0; $i < roundsCount; $i++) {
         $numb1 = random_int(1, 100);
         $numb2 = random_int(1, 100);
         $randOperation = array_rand(OPERATIONS);
         $operation = OPERATIONS[$randOperation];
         $correctAsnwer = getCorrectAnswer($numb1, $numb2, $operation);
-        $taskText = "$numb1 $operation $numb2";
-        $tasks[$taskText] = $correctAsnwer;
+        $task = "$numb1 $operation $numb2";
+        $tasks[$task] = $correctAsnwer;
     }
     return $tasks;
 }

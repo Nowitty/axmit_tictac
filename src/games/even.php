@@ -5,26 +5,25 @@
   use function BrainGames\handler\start;
   use function BrainGames\handler\flow;
 
-  use const BrainGames\handler\NUMBER_OF_ROUNDS;
+  use const BrainGames\handler\roundsCount;
 
   const TITLE = "Answer 'yes' if the number is even, otherwise answer 'no'";
 
 function run()
 {
-    $userName = start(TITLE);
     $tasks = getTasks();
-    flow($userName, $tasks);
+    flow($tasks, TITLE);
 }
 function getTasks()
 {
     $tasks = [];
-    for ($i = 0; $i < NUMBER_OF_ROUNDS; $i++) {
-        $numb = random_int(1, 100);
-        $tasks[$numb] = isEven($numb) ? 'yes' : 'no';
+    for ($i = 0; $i < roundsCount; $i++) {
+        $task = random_int(1, 100);
+        $tasks[$task] = isEven($task) ? 'yes' : 'no';
     }
     return $tasks;
 }
 function isEven($numb)
 {
-    return ($numb % 2 == 0) ? true : false;
+    return $numb % 2 == 0;
 }
