@@ -5,7 +5,7 @@
   use function BrainGames\handler\start;
   use function BrainGames\handler\flow;
 
-  use const BrainGames\handler\roundsCount;
+  use const BrainGames\handler\ROUNDS_COUNT;
 
   const TITLE = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
@@ -18,7 +18,7 @@ function run()
 function getTasks()
 {
     $tasks = [];
-    for ($i = 0; $i < roundsCount; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $numb = random_int(-500, 500);
         $correctAsnwer = isPrime($numb) ? 'yes' : 'no';
         $tasks[$numb] = $correctAsnwer;

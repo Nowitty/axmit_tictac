@@ -5,7 +5,7 @@
   use function BrainGames\handler\start;
   use function BrainGames\handler\flow;
 
-  use const BrainGames\handler\roundsCount;
+  use const BrainGames\handler\ROUNDS_COUNT;
 
   const TITLE = "What number is missing in the progression?";
   const LENGTH_OF_PROGRESSION = 10;
@@ -19,7 +19,7 @@ function run()
 function getTasks()
 {
     $tasks = [];
-    for ($i = 0; $i < roundsCount; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $numb = random_int(1, 100);
         $key = random_int(1, 8);
         $numbers = getArray($numb, $key);

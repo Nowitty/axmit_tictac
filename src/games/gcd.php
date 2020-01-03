@@ -5,7 +5,7 @@
   use function BrainGames\handler\start;
   use function BrainGames\handler\flow;
 
-  use const BrainGames\handler\roundsCount;
+  use const BrainGames\handler\ROUNDS_COUNT;
 
   const TITLE = "Find the greatest common divisor of given numbers.";
 
@@ -18,7 +18,7 @@ function run()
 function getTasks()
 {
     $tasks = [];
-    for ($i = 0; $i < roundsCount; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $numb1 = random_int(1, 100);
         $numb2 = random_int(1, 100);
         $correctAsnwer = getCorrectAnswer($numb1, $numb2);

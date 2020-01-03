@@ -5,7 +5,7 @@
   use function cli\line;
   use function cli\prompt;
   
-  const roundsCount = 3;
+  const ROUNDS_COUNT = 3;
 
 function flow($tasks, $title)
 {
