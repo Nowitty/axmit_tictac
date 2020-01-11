@@ -1,14 +1,13 @@
 <?php
 
-  namespace BrainGames\games\calc;
+namespace BrainGames\games\calc;
 
-  use function BrainGames\handler\start;
-  use function BrainGames\handler\flow;
+use function BrainGames\handler\flow;
 
-  use const BrainGames\handler\ROUNDS_COUNT;
+use const BrainGames\handler\ROUNDS_COUNT;
 
-  const TITLE = "What is the result of the expression?";
-  const OPERATIONS = ['+', '-', '*'];
+const TITLE = "What is the result of the expression?";
+const OPERATIONS = ['+', '-', '*'];
 
 function run()
 {

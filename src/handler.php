@@ -1,11 +1,11 @@
 <?php
 
-  namespace BrainGames\handler;
+namespace BrainGames\handler;
   
-  use function cli\line;
-  use function cli\prompt;
+use function cli\line;
+use function cli\prompt;
   
-  const ROUNDS_COUNT = 3;
+const ROUNDS_COUNT = 3;
 
 function flow($tasks, $title)
 {
@@ -21,7 +21,7 @@ function flow($tasks, $title)
         } else {
             line('\'%s\' is wrong answer ;(. Correct answer was \'%s\'.', $answer, $correctAnswer);
             line('Let\'s try again, %s', $userName);
-            return null;
+            return;
         }
     }
     line('Congratulations, %s!', $userName);

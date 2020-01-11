@@ -1,14 +1,13 @@
 <?php
 
-  namespace BrainGames\games\progression;
+namespace BrainGames\games\progression;
 
-  use function BrainGames\handler\start;
-  use function BrainGames\handler\flow;
+use function BrainGames\handler\flow;
 
-  use const BrainGames\handler\ROUNDS_COUNT;
+use const BrainGames\handler\ROUNDS_COUNT;
 
-  const TITLE = "What number is missing in the progression?";
-  const LENGTH_OF_PROGRESSION = 10;
+const TITLE = "What number is missing in the progression?";
+const LENGTH_OF_PROGRESSION = 10;
 
 function run()
 {
@@ -20,32 +19,32 @@ function getTasks()
 {
     $tasks = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        $numb = random_int(1, 100);
-        $key = random_int(1, 8);
-        $numbers = getArray($numb, $key);
-        $taskText = trim(implode(' ', $numbers));
-        $correctAsnwer = getCorrectAnswer($numbers);
-        $tasks[$taskText] = $correctAsnwer;
+        $firstTerm = random_int(1, 100);
+        $missedTerm = random_int(1, 8);
+        $diff = random_int(1, 10);
+        $progression = getProgression($firstTerm, $missedTerm, $diff);
+        $task = trim(implode(' ', $progression));
+        $correctAsnwer = getCorrectAnswer($progression, $diff);
+        $tasks[$task] = $correctAsnwer;
     }
     return $tasks;
 }
 
-function getArray($numb, $key)
+function getProgression($firstTerm, $missedTerm, $diff)
 {
-    $result[0] = $numb;
+    $result[0] = $firstTerm;
     for ($i = 1; $i < LENGTH_OF_PROGRESSION; $i++) {
-        $result[$i] = $result[$i - 1] + 2;
+        $result[$i] = $firstTerm + $diff * $i;
     }
-    $result[$key] = '..';
+    $result[$missedTerm] = '..';
     return $result;
 }
 
-function getCorrectAnswer($arr)
+function getCorrectAnswer($progression, $diff)
 {
-    $answer = 0;
     for ($i = 0; $i < LENGTH_OF_PROGRESSION - 1; $i++) {
-        if ($arr[$i] === "..") {
-            $answer = $arr[$i - 1] + 2;
+        if ($progression[$i] === "..") {
+            $answer = $progression[$i - 1] + $diff;
         }
     }
     return $answer;

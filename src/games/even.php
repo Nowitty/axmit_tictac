@@ -1,13 +1,12 @@
 <?php
 
-  namespace BrainGames\games\even;
+namespace BrainGames\games\even;
 
-  use function BrainGames\handler\start;
-  use function BrainGames\handler\flow;
+use function BrainGames\handler\flow;
 
-  use const BrainGames\handler\ROUNDS_COUNT;
+use const BrainGames\handler\ROUNDS_COUNT;
 
-  const TITLE = "Answer 'yes' if the number is even, otherwise answer 'no'";
+const TITLE = "Answer 'yes' if the number is even, otherwise answer 'no'";
 
 function run()
 {

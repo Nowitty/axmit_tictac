@@ -1,13 +1,12 @@
 <?php
 
-  namespace BrainGames\games\gcd;
+namespace BrainGames\games\gcd;
 
-  use function BrainGames\handler\start;
-  use function BrainGames\handler\flow;
+use function BrainGames\handler\flow;
 
-  use const BrainGames\handler\ROUNDS_COUNT;
+use const BrainGames\handler\ROUNDS_COUNT;
 
-  const TITLE = "Find the greatest common divisor of given numbers.";
+const TITLE = "Find the greatest common divisor of given numbers.";
 
 function run()
 {

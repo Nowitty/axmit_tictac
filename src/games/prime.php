@@ -1,13 +1,12 @@
 <?php
 
-  namespace BrainGames\games\prime;
+namespace BrainGames\games\prime;
 
-  use function BrainGames\handler\start;
-  use function BrainGames\handler\flow;
+use function BrainGames\handler\flow;
 
-  use const BrainGames\handler\ROUNDS_COUNT;
+use const BrainGames\handler\ROUNDS_COUNT;
 
-  const TITLE = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+const TITLE = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
 function run()
 {
