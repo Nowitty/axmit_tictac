@@ -10,17 +10,17 @@ const TITLE = "Answer 'yes' if the number is even, otherwise answer 'no'";
 
 function run()
 {
-    $tasks = getTasks();
-    flow($tasks, TITLE);
+    $task = getTasks();
+    flow($task, TITLE);
 }
 function getTasks()
 {
-    $tasks = [];
+    $task = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        $task = random_int(1, 100);
-        $tasks[$task] = isEven($task) ? 'yes' : 'no';
+        $question = random_int(1, 100);
+        $task[$question] = isEven($task) ? 'yes' : 'no';
     }
-    return $tasks;
+    return $task;
 }
 function isEven($numb)
 {

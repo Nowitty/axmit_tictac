@@ -11,41 +11,35 @@ const LENGTH_OF_PROGRESSION = 10;
 
 function run()
 {
-    $tasks = getTasks();
-    flow($tasks, TITLE);
+    $task = getTasks();
+    flow($task, TITLE);
 }
 
 function getTasks()
 {
     $tasks = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        $firstTerm = random_int(1, 100);
-        $missedTerm = random_int(1, 8);
+        $missedTermIndex = random_int(1, LENGTH_OF_PROGRESSION - 1);
         $diff = random_int(1, 10);
-        $progression = getProgression($firstTerm, $missedTerm, $diff);
-        $task = trim(implode(' ', $progression));
-        $correctAsnwer = getCorrectAnswer($progression, $diff);
-        $tasks[$task] = $correctAsnwer;
+        $question = getQuestion($missedTermIndex, $diff);
+        $correctAnswer = getCorrectAnswer($question[0], $missedTermIndex, $diff);
+        $question = trim(implode(' ', $question));
+        $task[$question] = $correctAnswer;
     }
-    return $tasks;
+    return $task;
 }
 
-function getProgression($firstTerm, $missedTerm, $diff)
+function getQuestion($missedTermIndex, $diff)
 {
-    $result[0] = $firstTerm;
-    for ($i = 1; $i < LENGTH_OF_PROGRESSION; $i++) {
+    $firstTerm = random_int(1, 100);
+    for ($i = 0; $i < LENGTH_OF_PROGRESSION; $i++) {
         $result[$i] = $firstTerm + $diff * $i;
     }
-    $result[$missedTerm] = '..';
+    $result[$missedTermIndex] = '..';
     return $result;
 }
 
-function getCorrectAnswer($progression, $diff)
+function getCorrectAnswer($firstTerm, $missedTermIndex, $diff)
 {
-    for ($i = 0; $i < LENGTH_OF_PROGRESSION - 1; $i++) {
-        if ($progression[$i] === "..") {
-            $answer = $progression[$i - 1] + $diff;
-        }
-    }
-    return $answer;
+    return $firstTerm + $diff * $missedTermIndex;
 }

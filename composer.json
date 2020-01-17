@@ -1,6 +1,4 @@
 {
-
-
     "name": "nowitty/php-project-lvl1",
     "bin": [
         "bin/brain-even",
@@ -33,7 +31,6 @@
         ]
     },
     "require": {
-        "php": "^7.3",
         "wp-cli/php-cli-tools": "@dev"
     },   
     "require-dev": {

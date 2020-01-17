@@ -10,19 +10,19 @@ const TITLE = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
 function run()
 {
-    $tasks = getTasks();
-    flow($tasks, TITLE);
+    $task = getTasks();
+    flow($task, TITLE);
 }
 
 function getTasks()
 {
-    $tasks = [];
+    $task = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        $numb = random_int(-500, 500);
-        $correctAsnwer = isPrime($numb) ? 'yes' : 'no';
-        $tasks[$numb] = $correctAsnwer;
+        $question = random_int(-500, 500);
+        $correctAsnwer = isPrime($question) ? 'yes' : 'no';
+        $task[$question] = $correctAsnwer;
     }
-    return $tasks;
+    return $task;
 }
 
 function isPrime($numb)

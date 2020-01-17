@@ -11,23 +11,23 @@ const OPERATIONS = ['+', '-', '*'];
 
 function run()
 {
-    $tasks = getTasks();
-    flow($tasks, TITLE);
+    $task = getTasks();
+    flow($task, TITLE);
 }
 
 function getTasks()
 {
-    $tasks = [];
+    $task = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $numb1 = random_int(1, 100);
         $numb2 = random_int(1, 100);
         $randOperation = array_rand(OPERATIONS);
         $operation = OPERATIONS[$randOperation];
         $correctAsnwer = getCorrectAnswer($numb1, $numb2, $operation);
-        $task = "$numb1 $operation $numb2";
-        $tasks[$task] = $correctAsnwer;
+        $question = "$numb1 $operation $numb2";
+        $task[$question] = $correctAsnwer;
     }
-    return $tasks;
+    return $task;
 }
 
 function getCorrectAnswer($n1, $n2, $operation)

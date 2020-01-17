@@ -19,8 +19,8 @@ function flow($tasks, $title)
         if ($answer == $correctAnswer) {
             line('Correct!');
         } else {
-            line('\'%s\' is wrong answer ;(. Correct answer was \'%s\'.', $answer, $correctAnswer);
-            line('Let\'s try again, %s', $userName);
+            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctAnswer);
+            line("Let's try again, %s", $userName);
             return;
         }
     }

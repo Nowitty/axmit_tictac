@@ -10,21 +10,21 @@ const TITLE = "Find the greatest common divisor of given numbers.";
 
 function run()
 {
-    $tasks = getTasks();
-    flow($tasks, TITLE);
+    $task = getTasks();
+    flow($task, TITLE);
 }
 
 function getTasks()
 {
-    $tasks = [];
+    $task = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $numb1 = random_int(1, 100);
         $numb2 = random_int(1, 100);
         $correctAsnwer = getCorrectAnswer($numb1, $numb2);
-        $taskText = "$numb1 $numb2";
-        $tasks[$taskText] = $correctAsnwer;
+        $question = "$numb1 $numb2";
+        $task[$question] = $correctAsnwer;
     }
-    return $tasks;
+    return $task;
 }
 
 function getCorrectAnswer($n1, $n2)
