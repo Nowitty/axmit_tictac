@@ -18,7 +18,6 @@
     },
     "autoload": {
         "files": [
-            "src/handler.php",
             "src/games/tictac.php"
         ]
     },

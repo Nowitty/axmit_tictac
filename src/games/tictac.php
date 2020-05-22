@@ -45,7 +45,12 @@ function run()
 function userMove()
 {
     $move = prompt("Make a move");
-    return explode(' ', $move);
+    if (preg_match('/[1-3] [1-3]/', $move)) {
+        return explode(' ', $move);
+    } else {
+        line('Something went wrong');
+        return userMove();
+    }
 }
 
 function moveAI($field)
