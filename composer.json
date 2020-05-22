@@ -1,11 +1,7 @@
 {
-    "name": "nowitty/php-project-lvl1",
+    "name": "nowitty/tictac",
     "bin": [
-        "bin/brain-even",
-        "bin/brain-calc",
-        "bin/brain-gcd",
-        "bin/brain-progression",
-        "bin/brain-prime"
+        "bin/brain-tictac"
     ],
     "authors": [
         {
@@ -23,11 +19,7 @@
     "autoload": {
         "files": [
             "src/handler.php",
-            "src/games/even.php",
-            "src/games/calc.php",
-            "src/games/gcd.php",
-            "src/games/progression.php",
-            "src/games/prime.php"
+            "src/games/tictac.php"
         ]
     },
     "require": {
@@ -35,13 +27,5 @@
     },   
     "require-dev": {
         "squizlabs/php_codesniffer": "3.*"
-    },
-    "keywords": [
-        "hexlet",
-        "first",
-        "project",
-        "games",
-        "console",
-        "brain"
-    ]
+    }
 }
