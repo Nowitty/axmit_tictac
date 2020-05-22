@@ -3,7 +3,7 @@
 namespace BrainGames\games\tictac;
 
 use function cli\line;
-use function cli\prompt;    
+use function cli\prompt;
 
 function run()
 {
@@ -38,7 +38,6 @@ function run()
             line("You can't do that...try again");
             continue;
         }
-        
     }
 }
 
@@ -66,20 +65,19 @@ function moveAI($field)
 
 function isWin($data)
 {
-        for ($i = 1; $i < 4; $i++) {
-            if ($data[$i][1] != null && $data[$i][1] == $data[$i][2] && $data[$i][2] == $data[$i][3]) {
-                return true;
-            }
-            if ($data[1][$i] != null && $data[1][$i] == $data[2][$i] && $data[2][$i] == $data[3][$i]) {
-                return true;
-            }
-        }
-        if ($data[1][1] != null && $data[1][1] == $data[2][2] && $data[2][2] == $data[3][3]) {
+    for ($i = 1; $i < 4; $i++) {
+        if ($data[$i][1] != null && $data[$i][1] == $data[$i][2] && $data[$i][2] == $data[$i][3]) {
             return true;
         }
-        if ($data[1][3] != null && $data[1][3] == $data[2][2] && $data[2][2] == $data[3][1]) {
+        if ($data[1][$i] != null && $data[1][$i] == $data[2][$i] && $data[2][$i] == $data[3][$i]) {
             return true;
         }
+    }
+    if ($data[1][1] != null && $data[1][1] == $data[2][2] && $data[2][2] == $data[3][3]) {
+        return true;
+    }
+    if ($data[1][3] != null && $data[1][3] == $data[2][2] && $data[2][2] == $data[3][1]) {
+        return true;
+    }
         return false;
 }
-
